@@ -1,0 +1,77 @@
+.section {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center -85px;
+}
+
+.loginContainer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8rem;
+  color: #fff;
+}
+
+.cornerImage {
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+}
+
+.unionSystems {
+  position: absolute;
+  bottom: 2%;
+  right: 9%;
+}
+
+.firstColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  padding-top: 7rem;
+}
+
+.wel {
+  color: #000;
+}
+
+.btn {
+  width: 100%;
+  background: #2d0c52;
+  color: #fff;
+  padding: 0.7rem;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+
+.formContainer {
+  color: #2d0c52;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+label {
+  font-weight: 500;
+}
+
+.form-control {
+}
+.input {
+  border: none;
+  border-bottom: 1px solid #2d0c52;
+  border-radius: 0;
+  padding: 1rem 1rem 1rem 0;
+  outline: none;
+  box-shadow: none;
+}

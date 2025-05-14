@@ -1,0 +1,25 @@
+<section class="outletContainer transition">
+  <h1 class="pageTitle">Users</h1>
+
+  <app-container [class]="'px-3 pt-4 pb-4 '">
+    <p class="fs-6 mb-5">Table showing lists of users</p>
+
+    <div class="d-flex align-items-center justify-content-between">
+      <app-search (search)="onSearch($event)"></app-search>
+
+      <a routerLink="/newusers" class="btn">New User</a>
+    </div>
+
+    <app-table
+      [columnData]="columnData"
+      [tableData]="paginatedData()"
+    ></app-table>
+
+    <app-pagination
+      [numberOfItemsPerPages]="endIndex"
+      [totalNumberOfItems]="numberOfItems"
+      (next)="next()"
+      (previous)="previous()"
+    ></app-pagination>
+  </app-container>
+</section>

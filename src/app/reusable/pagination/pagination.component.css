@@ -1,0 +1,40 @@
+.paginationContainer {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.rightContainer {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 5px;
+}
+
+.btn {
+  padding: 0;
+  border: none;
+  transition: all 1s ease;
+  font-size: 12px;
+}
+
+.activeBtn {
+  width: 26px;
+  height: 28px;
+  padding: 0.3rem;
+  background: #2d0c52;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 2px;
+  color: #fff;
+  transition: all 0.1s;
+}
+
+.text {
+  color: #656a71;
+}

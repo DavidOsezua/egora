@@ -1,0 +1,97 @@
+<section class="outletContainer transition">
+  <div class="chartContainer">
+    <!-- PRODUCTS -->
+    <div class="card">
+      <div class="top">
+        <h2 class="title">
+          Product <span class="smallTitle">(Profit/Loss)</span>
+        </h2>
+      </div>
+
+      <canvas id="products"> </canvas>
+    </div>
+
+    <!--TRANSACTIONS -->
+    <div class="card">
+      <div class="top">
+        <h2 class="title">
+          Transaction <span class="smallTitle"> (Volume)</span>
+        </h2>
+      </div>
+
+      <div class="doughnut">
+        <canvas id="transactions"> </canvas>
+      </div>
+    </div>
+
+    <!--PRODUCT MATURITY  -->
+    <div class="card">
+      <div class="top">
+        <h2 class="title">
+          Product <span class="smallTitle">(Maturity)</span>
+        </h2>
+      </div>
+
+      <div class="doughnut">
+        <canvas id="productMaturity"> </canvas>
+      </div>
+    </div>
+
+    <!--  -->
+    <div class="card">
+      <div class="top">
+        <h2 class="title">
+          Securities <span class="smallTitle">(Portfolio Analysis)</span>
+        </h2>
+      </div>
+
+      <canvas id="securities"> </canvas>
+    </div>
+    <div class="card">
+      <div class="top">
+        <h2 class="title">
+          Cost of Fund <span class="smallTitle">(Business Unit)</span>
+        </h2>
+      </div>
+
+      <canvas id="costOfFund"> </canvas>
+    </div>
+    <div class="card">
+      <div class="top">
+        <h2 class="title">
+          Revenue <span class="smallTitle">(Business Unit)</span>
+        </h2>
+      </div>
+
+      <canvas id="revenue"></canvas>
+    </div>
+  </div>
+
+  <div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+          <th>NGN</th>
+          <th>USD</th>
+          <th>EURO</th>
+          <th>GBP</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <ng-container *ngFor="let item of netOpeningPosition; let i = index">
+          <tr [ngClass]="{ first: i === 0 }">
+            <td class="label">{{ item.label }}</td>
+            <td>{{ item.date }}</td>
+            <td>{{ item.NGN }}</td>
+            <td>{{ item.USD }}</td>
+            <td>{{ item.EURO }}</td>
+            <td>{{ item.GBP }}</td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+</section>

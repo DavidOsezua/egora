@@ -1,0 +1,67 @@
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  border-bottom: 2px solid #000000;
+}
+
+thead th {
+  padding: 16px 12px;
+  text-align: left;
+  background-color: #fff;
+  font-weight: 600;
+}
+
+tbody tr {
+  height: 50px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f1f6f9; /* subtle background */
+}
+
+tbody td {
+  padding: 12px;
+}
+
+/* Optional: spacing between header and body */
+thead {
+  display: table-header-group;
+}
+
+table tbody::before {
+  content: "";
+  display: table-row;
+  height: 10px;
+}
+
+.text {
+  text-align: left;
+  font-weight: 600;
+  color: #212529;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+
+/* .table.table-striped {
+  background-color: #f1f6f9;
+} */
+
+.tableText {
+  font-weight: 300;
+  font-size: 14px;
+  color: #707070;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}

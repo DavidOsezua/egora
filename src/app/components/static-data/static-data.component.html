@@ -1,0 +1,20 @@
+<section class="outletContainer transition">
+  <h1 class="pageTitle">Static Data</h1>
+
+  <app-container>
+    <app-search></app-search>
+
+    <div class="gridLayout">
+      <ng-container *ngFor="let item of staticData; let i = index">
+        <div class="flexLayout">
+          <mat-icon [svgIcon]="item.icon" class="size"></mat-icon>
+
+          <div>
+            <a routerLink="/" class="linkTitle">{{ item.title }}</a>
+            <p class="linkText">{{ item.description }}</p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </app-container>
+</section>

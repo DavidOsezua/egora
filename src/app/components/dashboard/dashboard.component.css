@@ -1,0 +1,43 @@
+.chartContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  border: none;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.smallTitle {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+.doughnut {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  border-color: transparent;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+td {
+  font-size: 0.8rem;
+  color: #707070;
+}
+
+.label {
+  font-weight: 700;
+}
+
+.first {
+  background-color: #5e227f;
+}

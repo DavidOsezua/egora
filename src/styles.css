@@ -1,1 +1,97 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+.outletContainer {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.outletContainer > * + * {
+  margin-top: 1.5rem;
+}
+
+.active-link {
+  color: #5d16aa;
+  /* padding: 0.5rem 1rem; */
+  background: #fff;
+}
+
+.pageTitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: #342d38;
+}
+
+.linkTitle {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: #637185;
+}
+
+.linkText {
+  font-family: "Nunito", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+
+  color: #637185;
+}
+
+.flexLayout {
+  display: flex;
+  /* align-items: center; */
+  gap: 0.5rem;
+}
+
+.gridLayout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.appContainer {
+  padding: 0;
+}
+
+.transition {
+  animation: transitionIn 3s;
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}

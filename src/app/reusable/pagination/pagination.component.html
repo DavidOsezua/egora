@@ -1,0 +1,20 @@
+<div class="paginationContainer">
+  <p class="text">Showing {{ numberOfItemsPerPages }} of {{ totalNumberOfItems }}</p>
+
+  <div class="rightContainer">
+    <p class="m-0">Rows per Page</p>
+
+    <div class="buttonContainer">
+      <button class="btn" (click)="previousBtn()">Previous</button>
+      <button
+        class="btn"
+        [ngClass]="{ activeBtn: selectedButtons === i }"
+        *ngFor="let i of [1, 2, 3]"
+        (click)="selectPageNumber(i)"
+      >
+        {{ i }}
+      </button>
+      <button class="btn" (click)="nextBtn()">Next</button>
+    </div>
+  </div>
+</div>
