@@ -20,7 +20,7 @@
 
         <td class="tableText" *ngFor="let column of columnData">
           <div *ngIf="column === 'action'" class="icon">
-            <span>
+            <span (click)="actionHandler(items.id)">
               <svg
                 width="4"
                 height="16"
@@ -45,6 +45,7 @@
                 />
               </svg>
             </span>
+            <div *ngIf="actionActiveId === items.id">open</div>
           </div>
 
           <div *ngIf="column !== 'action'">

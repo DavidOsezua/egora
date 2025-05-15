@@ -13,6 +13,8 @@
     <app-table
       [columnData]="columnData"
       [tableData]="paginatedData()"
+      (action)="openActions($event)"
+      [actionActiveId]="actionActiveID"
     ></app-table>
 
     <app-pagination

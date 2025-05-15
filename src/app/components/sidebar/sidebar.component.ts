@@ -20,7 +20,7 @@ export class SidebarComponent {
   router = inject(Router);
 
   isActiveRoute(route: String): boolean {
-    console.log(this.router.url, route);
+    // console.log(this.router.url, route);
     return this.router.url === route;
   }
 

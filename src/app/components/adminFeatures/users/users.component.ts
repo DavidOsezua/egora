@@ -34,6 +34,7 @@ export class UsersComponent {
   currentPage: number = 1;
   itemsPerPage: number = 10;
   searchTerm: string = '';
+  actionActiveID: number | null = null;
 
   totalPages: number = Math.ceil(this.filteredData.length / this.itemsPerPage);
 
@@ -92,4 +93,9 @@ export class UsersComponent {
       this.currentPage--;
     }
   }
+
+  openActions(userID: number): void {
+    this.actionActiveID = this.actionActiveID === userID ? null : userID;
+  }
+  //
 }
