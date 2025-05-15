@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ContainerComponent } from '../../container/container.component';
 import { SearchComponent } from '../../search/search.component';
 import { TableComponent } from '../../../reusable/table/table.component';
@@ -6,6 +6,7 @@ import { PaginationComponent } from '../../../reusable/pagination/pagination.com
 import { RouterLink } from '@angular/router';
 import { User } from '../../../models/class';
 import { users } from './data';
+import { UserService } from '../../../services/userServices/user.service';
 
 @Component({
   selector: 'app-users',
@@ -19,9 +20,10 @@ import { users } from './data';
   templateUrl: './users.component.html',
   styleUrl: './users.component.css',
 })
-export class UsersComponent {
-  //Variables
-  userData: User[] = users;
+export class UsersComponent implements OnInit {
+  userService = inject(UserService);
+
+  userData: User[] = [];
   columnData: string[] = [
     'fullName',
     'email',
@@ -47,6 +49,21 @@ export class UsersComponent {
   }
   get endIndex(): number {
     return Math.min(this.currentPage * this.itemsPerPage, this.numberOfItems);
+  }
+
+  ngOnInit(): void {
+    this.LoadUsers();
+    console.log(this.userData);
+  }
+
+  //Load Users
+  LoadUsers() {
+    this.userService.getAllUsers().subscribe((data: User[]) => {
+      console.log(data);
+      this.userData = data;
+      this.filteredData = [...this.userData]
+      console.log(this.userData);
+    });
   }
 
   //Data here has been sliced
@@ -78,7 +95,10 @@ export class UsersComponent {
   //Pagiantion Next Function
   next(): void {
     debugger;
-    if (this.currentPage === this.totalPages) {
+    if (
+      this.currentPage === this.totalPages ||
+      this.endIndex < this.itemsPerPage
+    ) {
       return;
     } else {
       this.currentPage++;
@@ -96,6 +116,10 @@ export class UsersComponent {
 
   openActions(userID: number): void {
     this.actionActiveID = this.actionActiveID === userID ? null : userID;
+  }
+
+  goToPage(page: number): void {
+    this.currentPage = page;
   }
   //
 }

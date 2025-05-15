@@ -12,19 +12,31 @@ export class PaginationComponent {
   @Input() numberOfItemsPerPages: number = 0;
   @Output() next = new EventEmitter<void>();
   @Output() previous = new EventEmitter<void>();
+  @Output() goToPage = new EventEmitter();
   selectedButtons: number = 1;
 
   previousBtn(): void {
     debugger;
+    if (this.selectedButtons <= 1) {
+      return;
+    } else {
+      this.selectedButtons--;
+    }
     this.previous.emit();
   }
 
   nextBtn(): void {
     debugger;
+    if (this.selectedButtons >= 3) {
+      return;
+    } else {
+      this.selectedButtons++;
+    }
     this.next.emit();
   }
 
   selectPageNumber(pageNumber: number): void {
     this.selectedButtons = pageNumber;
+    this.goToPage.emit(pageNumber);
   }
 }

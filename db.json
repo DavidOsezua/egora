@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1,
+      "id": "1",
       "type": "Treasury note",
       "category": "FVTPL",
       "currency": "USD",
@@ -9,7 +9,7 @@
       "profitLoss": 100000000
     },
     {
-      "id": 2,
+      "id": "2",
       "type": "FX",
       "category": "FVTPL",
       "currency": "USD",
@@ -17,7 +17,7 @@
       "profitLoss": 60000000
     },
     {
-      "id": 3,
+      "id": "3",
       "type": "Bonds",
       "category": "FVTPL",
       "currency": "USD",
@@ -25,7 +25,7 @@
       "profitLoss": 105000000
     },
     {
-      "id": 4,
+      "id": "4",
       "type": "Derivatives",
       "category": "FVTPL",
       "currency": "USD",
@@ -33,7 +33,7 @@
       "profitLoss": -40000000
     },
     {
-      "id": 5,
+      "id": "5",
       "type": "Overdrafts/loans",
       "category": "FVTPL",
       "currency": "USD",
@@ -43,7 +43,7 @@
   ],
   "transactions": [
     {
-      "id": 1,
+      "id": "1",
       "type": "Treasury Note",
       "volume": 2000000,
       "category": "Fixed Income",
@@ -52,7 +52,7 @@
       "colorData": "#5E227F"
     },
     {
-      "id": 2,
+      "id": "2",
       "category": "Fixed Income",
       "currency": "USD",
       "frequency": "Monthly",
@@ -61,7 +61,7 @@
       "colorData": "#FCA542"
     },
     {
-      "id": 3,
+      "id": "3",
       "category": "Fixed Income",
       "currency": "USD",
       "frequency": "Monthly",
@@ -70,7 +70,7 @@
       "colorData": "#1C6DCA"
     },
     {
-      "id": 4,
+      "id": "4",
       "category": "Fixed Income",
       "currency": "USD",
       "frequency": "Monthly",
@@ -79,7 +79,7 @@
       "colorData": "#2D0C52"
     },
     {
-      "id": 5,
+      "id": "5",
       "category": "Fixed Income",
       "currency": "USD",
       "frequency": "Monthly",
@@ -88,7 +88,7 @@
       "colorData": "#944EE4"
     },
     {
-      "id": 6,
+      "id": "6",
       "category": "Fixed Income",
       "currency": "USD",
       "frequency": "Monthly",
@@ -98,68 +98,136 @@
     }
   ],
   "productMaturity": [
-    { "id": 1, "label": "10 years bond", "value": 2.2, "colorData": "#5E227F" },
     {
-      "id": 2,
+      "id": "1",
+      "label": "10 years bond",
+      "value": 2.2,
+      "colorData": "#5E227F"
+    },
+    {
+      "id": "2",
       "label": "180-Days Treasury Note",
-      "value": 2.0,
+      "value": 2,
       "colorData": "#FCA542"
     },
-    { "id": 3, "label": "30 years bond", "value": 1.5, "colorData": "#944EE4" },
-    { "id": 4, "label": "2 years bond", "value": 1.8, "colorData": "#2D0C52" },
     {
-      "id": 5,
+      "id": "3",
+      "label": "30 years bond",
+      "value": 1.5,
+      "colorData": "#944EE4"
+    },
+    {
+      "id": "4",
+      "label": "2 years bond",
+      "value": 1.8,
+      "colorData": "#2D0C52"
+    },
+    {
+      "id": "5",
       "label": "90-Days Treasury Note",
       "value": 1.9,
       "color": "#56CCF2"
     },
     {
-      "id": 6,
+      "id": "6",
       "label": "5 years bond",
       "value": 2.3,
       "colorData": "#1C6DCA"
     },
     {
-      "id": 7,
+      "id": "7",
       "label": "364-Days Treasury Note",
       "value": 2.8,
       "colorData": "#89CE94"
     }
   ],
   "securities": [
-    { "id": 1, "label": "Trading", "value": 58, "colorData": "#89CE94" },
     {
-      "id": 2,
+      "id": "1",
+      "label": "Trading",
+      "value": 58,
+      "colorData": "#89CE94"
+    },
+    {
+      "id": "2",
       "label": "Available for Sale",
       "value": 96,
       "colorData": "#89CE94"
     },
-    { "id": 3, "label": "Till Maturity", "value": 120, "colorData": "#89CE94" }
+    {
+      "id": "3",
+      "label": "Till Maturity",
+      "value": 120,
+      "colorData": "#89CE94"
+    }
   ],
   "costOfFund": [
     {
-      "id": 1,
+      "id": "1",
       "region": "Nigeria",
       "budget": 12,
       "actual": 15
     },
-    { "id": 2, "region": "East Africa", "budget": 14, "actual": 18 },
-    { "id": 3, "region": "West Africa", "budget": 13, "actual": 16 },
-    { "id": 4, "region": "UK", "budget": 16, "actual": 17 },
-    { "id": 5, "region": "US", "budget": 10, "actual": 14 }
+    {
+      "id": "2",
+      "region": "East Africa",
+      "budget": 14,
+      "actual": 18
+    },
+    {
+      "id": "3",
+      "region": "West Africa",
+      "budget": 13,
+      "actual": 16
+    },
+    {
+      "id": "4",
+      "region": "UK",
+      "budget": 16,
+      "actual": 17
+    },
+    {
+      "id": "5",
+      "region": "US",
+      "budget": 10,
+      "actual": 14
+    }
   ],
-
   "revenue": [
-    { "id": 1, "region": "Nigeria", "budget": 70, "actual": 60 },
-    { "id": 2, "region": "East Africa", "budget": 70, "actual": 90 },
-    { "id": 3, "region": "West Africa", "budget": 60, "actual": 65 },
-    { "id": 4, "region": "UK", "budget": 75, "actual": 60 },
-    { "id": 5, "region": "USA", "budget": 30, "actual": 20 }
+    {
+      "id": "1",
+      "region": "Nigeria",
+      "budget": 70,
+      "actual": 60
+    },
+    {
+      "id": "2",
+      "region": "East Africa",
+      "budget": 70,
+      "actual": 90
+    },
+    {
+      "id": "3",
+      "region": "West Africa",
+      "budget": 60,
+      "actual": 65
+    },
+    {
+      "id": "4",
+      "region": "UK",
+      "budget": 75,
+      "actual": 60
+    },
+    {
+      "id": "5",
+      "region": "USA",
+      "budget": 30,
+      "actual": 20
+    }
   ],
-
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "fullName": "John Doe",
       "email": "john@example.com",
       "username": "johndoe",
@@ -171,6 +239,34 @@
       "address": "123 Main Street",
       "roles": "Admin",
       "profilePicture": "https://via.placeholder.com/150"
+    },
+    {
+      "id": "9330",
+      "fullName": "David Jent",
+      "email": "david@gmail.com",
+      "username": "JentD",
+      "password": "123456789",
+      "mobilePhone": "+2348162900744",
+      "status": "Inactive",
+      "branch": "Island",
+      "superUser": false,
+      "address": "Chevron Drive",
+      "roles": "User",
+      "profilePicture": ""
+    },
+    {
+      "id": "80cc",
+      "fullName": "Cool man",
+      "email": "coolman@gmail.com",
+      "username": "Cool M",
+      "password": "123456789",
+      "mobilePhone": "+2348162900745",
+      "status": "Inactive",
+      "branch": "Iyana Ipaja",
+      "superUser": false,
+      "address": "Gate Bus-stop",
+      "roles": "User",
+      "profilePicture": ""
     }
   ]
 }

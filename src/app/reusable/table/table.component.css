@@ -1,11 +1,11 @@
 .table-container {
   width: 100%;
-  overflow-x: auto;
+  /* overflow-x: auto; */
 }
 
 table {
   width: 100%;
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
 }
 
 thead {
@@ -31,7 +31,6 @@ tbody td {
   padding: 12px;
 }
 
-/* Optional: spacing between header and body */
 thead {
   display: table-header-group;
 }
@@ -64,4 +63,29 @@ table tbody::before {
   display: flex;
   justify-content: center;
   cursor: pointer;
+  position: relative;
+}
+
+.actionContainer {
+  position: absolute;
+  z-index: 200;
+  padding: 0.5rem;
+  top: 50%;
+  height: 93px;
+  background: #ffffff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+
+  /* padding: 1rem; */
+}
+
+.btn,
+.link {
+  font-size: 14px;
+  display: block;
+  text-align: left;
+}
+
+.actionContainer > * + * {
+  margin-top: 0.1rem;
 }

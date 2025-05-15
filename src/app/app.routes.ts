@@ -16,6 +16,7 @@ import { LayoutComponent } from './components/layout/layout.component';
 import { UtilitiesComponent } from './components/utilities/utilities.component';
 import { UsersComponent } from './components/adminFeatures/users/users.component';
 import { NewUsersComponent } from './components/adminFeatures/users/new-users/new-users.component';
+import { ViewUserComponent } from './components/adminFeatures/users/view-user/view-user.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -86,8 +87,16 @@ export const routes: Routes = [
         component: UsersComponent,
       },
       {
-        path: 'newusers',
+        path: 'newuser',
         component: NewUsersComponent,
+      },
+      {
+        path: 'edituser/:id',
+        component: NewUsersComponent,
+      },
+      {
+        path: 'viewuser/:id',
+        component: ViewUserComponent,
       },
     ],
   },
