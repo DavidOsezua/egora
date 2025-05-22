@@ -12,10 +12,10 @@
     </thead>
 
     <tbody>
-      <tr *ngFor="let items of tableData">
+      <tr *ngFor="let items of tableData; let i = index">
         <td class="text d-flex">
           <input type="checkbox" />
-          <span class="ps-2 pb-0">{{ items.id }}</span>
+          <span class="ps-2 pb-0">{{ i + 1 }}</span>
         </td>
 
         <td class="tableText" *ngFor="let column of columnData">

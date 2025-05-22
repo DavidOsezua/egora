@@ -1,5 +1,6 @@
 .navbar {
   height: 60px;
+  position: relative;
 }
 
 .navContainer {
@@ -65,12 +66,6 @@
   gap: 2rem;
 }
 
-.users {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 .purple,
 .skyblue {
   width: 100%;
@@ -86,3 +81,123 @@
   background: #f1f2fd;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
+
+.users {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+}
+
+.users .dropdown-toggle {
+  background: #1f2937;
+  color: white;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 200px;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.users .dropdown-toggle:hover {
+  background: #374151;
+}
+
+.users .arrow {
+  transition: transform 0.3s ease;
+  font-size: 14px;
+}
+
+.users.active .arrow {
+  transform: rotate(180deg);
+}
+
+.users .dropdown {
+  position: absolute;
+  top: 40px;
+  right: 2%;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  margin-top: 10px;
+  overflow: hidden;
+  max-width: 300px;
+  width: 100%;
+  opacity: 0;
+  transform: rotateX(-90deg);
+  transform-origin: top;
+  visibility: hidden;
+  transition: all 1.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.users.active .dropdown {
+  opacity: 1;
+  transform: rotateX(0deg);
+  visibility: visible;
+}
+.users.non-active .dropdown {
+  opacity: 0;
+  transform: rotateX(-90deg);
+  visibility: hidden;
+}
+
+.users .dropdown-i {
+  padding: 12px 16px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateX(-20px);
+  opacity: 0;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.users .dropdown-i:last-child {
+  border-bottom: none;
+}
+
+/* Stagger animation when active */
+.users.active .dropdown-i {
+  animation: slideDown 0.2s ease forwards;
+}
+.users.non-active .dropdown-i {
+  animation: slideUp 0.3s ease forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateY(-60px);
+  }
+}
+
+/* @keyframes slideInStagger {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+} */
